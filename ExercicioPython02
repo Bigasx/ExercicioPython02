@@ -1,0 +1,29 @@
+class Time:
+    def __init__(self, nome, jogadores):
+        self.nome = nome
+        self.jogadores = jogadores
+
+    def adiciona_jogador(self, nome, camisa):
+        self.jogadores.append([nome, camisa])
+
+    def imprime_jogadores(self):
+        print(f"Jogadores do time {self.nome}:")
+        for jogador in self.jogadores:
+            print(f"{jogador[1]} - {jogador[0]}")
+
+# criando uma instância da classe para testar os métodos implementados
+meu_time = Time("Meu Time", [["João", 10], ["Pedro", 7]])
+
+meu_time.imprime_jogadores()
+# output:
+# Jogadores do time Meu Time:
+# 10 - João
+# 7 - Pedro
+
+meu_time.adiciona_jogador("Maria", 9)
+meu_time.imprime_jogadores()
+# output:
+# Jogadores do time Meu Time:
+# 10 - João
+# 7 - Pedro
+# 9 - Maria
